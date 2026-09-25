@@ -1,0 +1,296 @@
+{
+  "tool": {
+    "id": "ariscat",
+    "title": "ARISCAT",
+    "short": "Risco de complicação pulmonar pós-operatória",
+    "desc": "Escore ARISCAT (Canet 2010): risco de complicações pulmonares pós-operatórias a partir de 7 fatores do paciente e da cirurgia, em baixo, intermediário ou alto.",
+    "lead": "Estima o risco de complicações pulmonares pós-operatórias (infecção respiratória, insuficiência respiratória, broncoespasmo, atelectasia, derrame, pneumotórax ou pneumonite aspirativa) em cirurgias com anestesia geral, neuraxial ou regional.",
+    "spec": [
+      "cirurgia-toracica",
+      "anestesiologia",
+      "pneumologia",
+      "cirurgia-geral",
+      "clinica-medica"
+    ],
+    "tier": 1,
+    "fields": [
+      [
+        "idade",
+        "Idade",
+        "radio",
+        {
+          "opts": {
+            "0": "≤ 50 anos",
+            "3": "51 a 80 anos",
+            "16": "&gt; 80 anos"
+          }
+        }
+      ],
+      [
+        "sat",
+        "SatO₂ pré-operatória (ar ambiente, em repouso)",
+        "radio",
+        {
+          "opts": {
+            "0": "≥ 96%",
+            "8": "91 a 95%",
+            "24": "≤ 90%"
+          }
+        }
+      ],
+      [
+        "infec",
+        "Infecção respiratória no último mês",
+        "chk",
+        {
+          "pts": 17
+        }
+      ],
+      [
+        "anemia",
+        "Anemia pré-operatória (Hb ≤ 10 g/dL)",
+        "chk",
+        {
+          "pts": 11
+        }
+      ],
+      [
+        "incisao",
+        "Local da incisão",
+        "radio",
+        {
+          "opts": {
+            "0": "Periférica",
+            "15": "Abdominal alta",
+            "24": "Intratorácica"
+          }
+        }
+      ],
+      [
+        "duracao",
+        "Duração da cirurgia",
+        "radio",
+        {
+          "opts": {
+            "0": "&lt; 2 h",
+            "16": "2 a 3 h",
+            "23": "&gt; 3 h"
+          }
+        }
+      ],
+      [
+        "emerg",
+        "Cirurgia de emergência",
+        "chk",
+        {
+          "pts": 8
+        }
+      ]
+    ],
+    "score": {
+      "label": "ARISCAT",
+      "bands": [
+        [
+          0,
+          "low",
+          "Baixo risco (&lt; 26): 1,6% de complicações pulmonares",
+          "Cuidados habituais."
+        ],
+        [
+          26,
+          "mid",
+          "Risco intermediário (26 a 44): 13,3% de complicações pulmonares",
+          "Considerar estratégias de proteção pulmonar e fisioterapia respiratória."
+        ],
+        [
+          45,
+          "high",
+          "Alto risco (≥ 45): 42,1% de complicações pulmonares",
+          "Otimizar antes da cirurgia, ventilação protetora, analgesia que poupe a tosse e mobilização precoce."
+        ]
+      ]
+    },
+    "formula": "<p>Idade 51–80 = 3, &gt; 80 = 16 · SatO₂ 91–95% = 8, ≤ 90% = 24 · infecção respiratória no último mês = 17 · Hb ≤ 10 g/dL = 11 · incisão abdominal alta = 15, intratorácica = 24 · duração 2–3 h = 16, &gt; 3 h = 23 · emergência = 8.</p>",
+    "table": [
+      [
+        "Pontos",
+        "Risco",
+        "Complicações pulmonares"
+      ],
+      [
+        "&lt; 26",
+        "Baixo",
+        "1,6%"
+      ],
+      [
+        "26–44",
+        "Intermediário",
+        "13,3%"
+      ],
+      [
+        "≥ 45",
+        "Alto",
+        "42,1%"
+      ]
+    ],
+    "table_note": "Taxas na subamostra de validação de Canet 2010.",
+    "tips": [
+      "Cirurgia torácica ou abdominal alta com mais de 2 horas já soma ≥ 31 pontos: esses pacientes nunca são de baixo risco.",
+      "Os fatores modificáveis são poucos (anemia, infecção recente): se a cirurgia é eletiva, adiar após infecção respiratória reduz o risco.",
+      "Estratégias com benefício: ventilação protetora (volume corrente baixo, PEEP), bloqueio neuromuscular revertido por completo, analgesia regional e fisioterapia com expansão pulmonar.",
+      "O ARISCAT não estima a função pulmonar residual após ressecção pulmonar: para isso, use VEF₁ e DLCO previstos pós-operatórios."
+    ],
+    "sources": [
+      [
+        "Canet J et al. Prediction of postoperative pulmonary complications in a population-based surgical cohort. Anesthesiology, 2010.",
+        "https://doi.org/10.1097/ALN.0b013e3181fc6e0a"
+      ]
+    ],
+    "cases": [
+      [
+        "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
+        {
+          "idade": "3",
+          "sat": "0",
+          "incisao": "0",
+          "duracao": "0"
+        },
+        {
+          "score": 3,
+          "level": "low"
+        }
+      ],
+      [
+        "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
+        {
+          "idade": "3",
+          "sat": "8",
+          "incisao": "15",
+          "duracao": "0"
+        },
+        {
+          "score": 26,
+          "level": "mid"
+        }
+      ],
+      [
+        "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
+        {
+          "idade": "3",
+          "sat": "0",
+          "incisao": "15",
+          "duracao": "16"
+        },
+        {
+          "score": 34,
+          "level": "mid"
+        }
+      ],
+      [
+        "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
+        {
+          "idade": "16",
+          "sat": "8",
+          "incisao": "15",
+          "duracao": "23"
+        },
+        {
+          "score": 62,
+          "level": "high"
+        }
+      ]
+    ],
+    "batch": "torax-vascular",
+    "kind": "Escore",
+    "config": {
+      "unit": "",
+      "label": "ARISCAT",
+      "fields": [
+        [
+          "idade",
+          "radio",
+          0
+        ],
+        [
+          "sat",
+          "radio",
+          0
+        ],
+        [
+          "infec",
+          "chk",
+          17
+        ],
+        [
+          "anemia",
+          "chk",
+          11
+        ],
+        [
+          "incisao",
+          "radio",
+          0
+        ],
+        [
+          "duracao",
+          "radio",
+          0
+        ],
+        [
+          "emerg",
+          "chk",
+          8
+        ]
+      ],
+      "bands": [
+        [
+          0,
+          "low",
+          "Baixo risco (&lt; 26): 1,6% de complicações pulmonares",
+          "Cuidados habituais."
+        ],
+        [
+          26,
+          "mid",
+          "Risco intermediário (26 a 44): 13,3% de complicações pulmonares",
+          "Considerar estratégias de proteção pulmonar e fisioterapia respiratória."
+        ],
+        [
+          45,
+          "high",
+          "Alto risco (≥ 45): 42,1% de complicações pulmonares",
+          "Otimizar antes da cirurgia, ventilação protetora, analgesia que poupe a tosse e mobilização precoce."
+        ]
+      ]
+    },
+    "areaId": "cardiotoracica",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/torax-vascular.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 4,
+      "passed": 4,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/torax-vascular.php",
+    "sha256": "e99bbd1938580ff9b46e0252fdd8cb72e87c63869f934005b8ef6d807ce8b6e2",
+    "bytes": 91275
+  },
+  "clinicalValidation": "not-performed"
+}

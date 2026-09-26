@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-ariscat",
   "version": "0.1.0",
-  "description": "ARISCAT · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "ARISCAT · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",

@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-ariscat · Elucenia · https://github.com/Elucenia/tool-ariscat
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"ariscat","title":"ARISCAT","fields":[["idade","Idade","radio",{"opts":{"0":"≤ 50 anos","3":"51 a 80 anos","16":"&gt; 80 anos"}}],["sat","SatO₂ pré-operatória (ar ambiente, em repouso)","radio",{"opts":{"0":"≥ 96%","8":"91 a 95%","24":"≤ 90%"}}],["infec","Infecção respiratória no último mês","chk",{"pts":17}],["anemia","Anemia pré-operatória (Hb ≤ 10 g/dL)","chk",{"pts":11}],["incisao","Local da incisão","radio",{"opts":{"0":"Periférica","15":"Abdominal alta","24":"Intratorácica"}}],["duracao","Duração da cirurgia","radio",{"opts":{"0":"&lt; 2 h","16":"2 a 3 h","23":"&gt; 3 h"}}],["emerg","Cirurgia de emergência","chk",{"pts":8}]],"config":{"unit":"","label":"ARISCAT","fields":[["idade","radio",0],["sat","radio",0],["infec","chk",17],["anemia","chk",11],["incisao","radio",0],["duracao","radio",0],["emerg","chk",8]],"bands":[[0,"low","Baixo risco (&lt; 26): 1,6% de complicações pulmonares","Cuidados habituais."],[26,"mid","Risco intermediário (26 a 44): 13,3% de complicações pulmonares","Considerar estratégias de proteção pulmonar e fisioterapia respiratória."],[45,"high","Alto risco (≥ 45): 42,1% de complicações pulmonares","Otimizar antes da cirurgia, ventilação protetora, analgesia que poupe a tosse e mobilização precoce."]]},"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};

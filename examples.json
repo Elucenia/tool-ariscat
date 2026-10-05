@@ -1,82 +1,174 @@
 [
   {
-    "label": "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
-    "input": {
+    "id": "ariscat",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
+    "originalInput": {
       "idade": "3",
       "sat": "0",
       "incisao": "0",
       "duracao": "0"
+    },
+    "input": {
+      "idade": "3",
+      "sat": "0",
+      "incisao": "0",
+      "duracao": "0",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
     },
     "expected": {
       "score": 3,
       "level": "low"
     },
-    "originalInput": {
-      "idade": "3",
-      "sat": "0",
-      "incisao": "0",
-      "duracao": "0"
+    "recordedResult": {
+      "main": [
+        "3",
+        "pontos"
+      ],
+      "label": "ARISCAT",
+      "raw": {
+        "score": 3
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
-    "input": {
+    "id": "ariscat",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
+    "originalInput": {
       "idade": "3",
       "sat": "8",
       "incisao": "15",
       "duracao": "0"
+    },
+    "input": {
+      "idade": "3",
+      "sat": "8",
+      "incisao": "15",
+      "duracao": "0",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
     },
     "expected": {
       "score": 26,
       "level": "mid"
     },
-    "originalInput": {
-      "idade": "3",
-      "sat": "8",
-      "incisao": "15",
-      "duracao": "0"
+    "recordedResult": {
+      "main": [
+        "26",
+        "pontos"
+      ],
+      "label": "ARISCAT",
+      "raw": {
+        "score": 26
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
-    "input": {
+    "id": "ariscat",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
+    "originalInput": {
       "idade": "3",
       "sat": "0",
       "incisao": "15",
       "duracao": "16"
+    },
+    "input": {
+      "idade": "3",
+      "sat": "0",
+      "incisao": "15",
+      "duracao": "16",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
     },
     "expected": {
       "score": 34,
       "level": "mid"
     },
-    "originalInput": {
-      "idade": "3",
-      "sat": "0",
-      "incisao": "15",
-      "duracao": "16"
+    "recordedResult": {
+      "main": [
+        "34",
+        "pontos"
+      ],
+      "label": "ARISCAT",
+      "raw": {
+        "score": 34
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
-    "input": {
+    "id": "ariscat",
+    "kind": "native-source-reference",
+    "index": 3,
+    "name": "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
+    "originalInput": {
       "idade": "16",
       "sat": "8",
       "incisao": "15",
       "duracao": "23"
+    },
+    "input": {
+      "idade": "16",
+      "sat": "8",
+      "incisao": "15",
+      "duracao": "23",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
     },
     "expected": {
       "score": 62,
       "level": "high"
     },
-    "originalInput": {
-      "idade": "16",
-      "sat": "8",
-      "incisao": "15",
-      "duracao": "23"
+    "recordedResult": {
+      "main": [
+        "62",
+        "pontos"
+      ],
+      "label": "ARISCAT",
+      "raw": {
+        "score": 62
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

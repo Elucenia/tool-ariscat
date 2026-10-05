@@ -1,0 +1,289 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field idade",
+    "input": {
+      "sat": "0",
+      "incisao": "0",
+      "duracao": "0",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field idade",
+    "input": {
+      "idade": "",
+      "sat": "0",
+      "incisao": "0",
+      "duracao": "0",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option idade",
+    "input": {
+      "idade": "__ELUCENIA_INVALID_OPTION__",
+      "sat": "0",
+      "incisao": "0",
+      "duracao": "0",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field sat",
+    "input": {
+      "idade": "3",
+      "incisao": "0",
+      "duracao": "0",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "sat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field sat",
+    "input": {
+      "idade": "3",
+      "sat": "",
+      "incisao": "0",
+      "duracao": "0",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "sat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option sat",
+    "input": {
+      "idade": "3",
+      "sat": "__ELUCENIA_INVALID_OPTION__",
+      "incisao": "0",
+      "duracao": "0",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "sat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean infec",
+    "input": {
+      "idade": "3",
+      "sat": "0",
+      "incisao": "0",
+      "duracao": "0",
+      "infec": "2",
+      "anemia": false,
+      "emerg": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "infec"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean anemia",
+    "input": {
+      "idade": "3",
+      "sat": "0",
+      "incisao": "0",
+      "duracao": "0",
+      "infec": false,
+      "anemia": "2",
+      "emerg": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "anemia"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field incisao",
+    "input": {
+      "idade": "3",
+      "sat": "0",
+      "duracao": "0",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "incisao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field incisao",
+    "input": {
+      "idade": "3",
+      "sat": "0",
+      "incisao": "",
+      "duracao": "0",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "incisao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option incisao",
+    "input": {
+      "idade": "3",
+      "sat": "0",
+      "incisao": "__ELUCENIA_INVALID_OPTION__",
+      "duracao": "0",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "incisao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field duracao",
+    "input": {
+      "idade": "3",
+      "sat": "0",
+      "incisao": "0",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "duracao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field duracao",
+    "input": {
+      "idade": "3",
+      "sat": "0",
+      "incisao": "0",
+      "duracao": "",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "duracao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option duracao",
+    "input": {
+      "idade": "3",
+      "sat": "0",
+      "incisao": "0",
+      "duracao": "__ELUCENIA_INVALID_OPTION__",
+      "infec": false,
+      "anemia": false,
+      "emerg": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "duracao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean emerg",
+    "input": {
+      "idade": "3",
+      "sat": "0",
+      "incisao": "0",
+      "duracao": "0",
+      "infec": false,
+      "anemia": false,
+      "emerg": "2"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "emerg"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

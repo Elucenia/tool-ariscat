@@ -5,6 +5,7 @@
     "short": "Risco de complicação pulmonar pós-operatória",
     "desc": "Escore ARISCAT (Canet 2010): risco de complicações pulmonares pós-operatórias a partir de 7 fatores do paciente e da cirurgia, em baixo, intermediário ou alto.",
     "lead": "Estima o risco de complicações pulmonares pós-operatórias (infecção respiratória, insuficiência respiratória, broncoespasmo, atelectasia, derrame, pneumotórax ou pneumonite aspirativa) em cirurgias com anestesia geral, neuraxial ou regional.",
+    "kind": "Escore",
     "spec": [
       "cirurgia-toracica",
       "anestesiologia",
@@ -12,7 +13,6 @@
       "cirurgia-geral",
       "clinica-medica"
     ],
-    "tier": 1,
     "fields": [
       [
         "idade",
@@ -42,17 +42,13 @@
         "infec",
         "Infecção respiratória no último mês",
         "chk",
-        {
-          "pts": 17
-        }
+        {}
       ],
       [
         "anemia",
         "Anemia pré-operatória (Hb ≤ 10 g/dL)",
         "chk",
-        {
-          "pts": 11
-        }
+        {}
       ],
       [
         "incisao",
@@ -72,8 +68,8 @@
         "radio",
         {
           "opts": {
-            "0": "&lt; 2 h",
-            "16": "2 a 3 h",
+            "0": "≤ 2 h",
+            "16": "&gt; 2 h e ≤ 3 h",
             "23": "&gt; 3 h"
           }
         }
@@ -82,64 +78,10 @@
         "emerg",
         "Cirurgia de emergência",
         "chk",
-        {
-          "pts": 8
-        }
+        {}
       ]
     ],
-    "score": {
-      "label": "ARISCAT",
-      "bands": [
-        [
-          0,
-          "low",
-          "Baixo risco (&lt; 26): 1,6% de complicações pulmonares",
-          "Cuidados habituais."
-        ],
-        [
-          26,
-          "mid",
-          "Risco intermediário (26 a 44): 13,3% de complicações pulmonares",
-          "Considerar estratégias de proteção pulmonar e fisioterapia respiratória."
-        ],
-        [
-          45,
-          "high",
-          "Alto risco (≥ 45): 42,1% de complicações pulmonares",
-          "Otimizar antes da cirurgia, ventilação protetora, analgesia que poupe a tosse e mobilização precoce."
-        ]
-      ]
-    },
-    "formula": "<p>Idade 51–80 = 3, &gt; 80 = 16 · SatO₂ 91–95% = 8, ≤ 90% = 24 · infecção respiratória no último mês = 17 · Hb ≤ 10 g/dL = 11 · incisão abdominal alta = 15, intratorácica = 24 · duração 2–3 h = 16, &gt; 3 h = 23 · emergência = 8.</p>",
-    "table": [
-      [
-        "Pontos",
-        "Risco",
-        "Complicações pulmonares"
-      ],
-      [
-        "&lt; 26",
-        "Baixo",
-        "1,6%"
-      ],
-      [
-        "26–44",
-        "Intermediário",
-        "13,3%"
-      ],
-      [
-        "≥ 45",
-        "Alto",
-        "42,1%"
-      ]
-    ],
-    "table_note": "Taxas na subamostra de validação de Canet 2010.",
-    "tips": [
-      "Cirurgia torácica ou abdominal alta com mais de 2 horas já soma ≥ 31 pontos: esses pacientes nunca são de baixo risco.",
-      "Os fatores modificáveis são poucos (anemia, infecção recente): se a cirurgia é eletiva, adiar após infecção respiratória reduz o risco.",
-      "Estratégias com benefício: ventilação protetora (volume corrente baixo, PEEP), bloqueio neuromuscular revertido por completo, analgesia regional e fisioterapia com expansão pulmonar.",
-      "O ARISCAT não estima a função pulmonar residual após ressecção pulmonar: para isso, use VEF₁ e DLCO previstos pós-operatórios."
-    ],
+    "formula": "<p>Idade 51–80 = 3, &gt; 80 = 16 · SatO₂ 91–95% = 8, ≤ 90% = 24 · infecção respiratória no último mês = 17 · Hb ≤ 10 g/dL = 11 · incisão abdominal alta = 15, intratorácica = 24 · duração ≤ 2 h = 0, &gt; 2 h e ≤ 3 h = 16, &gt; 3 h = 23 · emergência = 8.</p>",
     "sources": [
       [
         "Canet J et al. Prediction of postoperative pulmonary complications in a population-based surgical cohort. Anesthesiology, 2010.",
@@ -200,69 +142,6 @@
         }
       ]
     ],
-    "kind": "Escore",
-    "config": {
-      "unit": "",
-      "label": "ARISCAT",
-      "fields": [
-        [
-          "idade",
-          "radio",
-          0
-        ],
-        [
-          "sat",
-          "radio",
-          0
-        ],
-        [
-          "infec",
-          "chk",
-          17
-        ],
-        [
-          "anemia",
-          "chk",
-          11
-        ],
-        [
-          "incisao",
-          "radio",
-          0
-        ],
-        [
-          "duracao",
-          "radio",
-          0
-        ],
-        [
-          "emerg",
-          "chk",
-          8
-        ]
-      ],
-      "bands": [
-        [
-          0,
-          "low",
-          "Baixo risco (&lt; 26): 1,6% de complicações pulmonares",
-          "Cuidados habituais."
-        ],
-        [
-          26,
-          "mid",
-          "Risco intermediário (26 a 44): 13,3% de complicações pulmonares",
-          "Considerar estratégias de proteção pulmonar e fisioterapia respiratória."
-        ],
-        [
-          45,
-          "high",
-          "Alto risco (≥ 45): 42,1% de complicações pulmonares",
-          "Otimizar antes da cirurgia, ventilação protetora, analgesia que poupe a tosse e mobilização precoce."
-        ]
-      ]
-    },
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -271,17 +150,705 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T19:23:48.162Z",
+      "total": 648,
+      "passed": 648,
+      "sourceRowCount": 648,
+      "uniqueApiInputCount": 648,
+      "sourceContextCount": 648,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "c7ce89cad55eeb4ef03d3b7da11357507ddd9cbaf54216678c54599624db3732",
+        "total": 648,
+        "bankRowCount": 648,
+        "uniqueApiInputCount": 648,
+        "sourceContextCount": 648,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/eight-diagnostic-independent-expectations-final26.json",
+            "sha256": "152a977a91b3f4279cac6a749638cae27a306f0bb072fa2400843da0db1e8268"
+          },
+          {
+            "file": "reports/review-20261003/eight-diagnostic-primary-source-review-final26.json",
+            "sha256": "8e4fe23dcd12fa323c509ec5432d30d841fe378f42ce1b05abc2724fa540481b"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/eight-diagnostic-independent-source-check-final26.json",
+          "sha256": "9925c0c432d78f268a3a5dd4d52cef5de566b192d5c3de6e7bbd6895eaf9d2b5"
+        },
+        "packagingRequirement": "Compose separately owned source/rubric/edition changes and fresh build/package/browser bindings before publication."
+      },
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "sourceRows": 648,
+        "uniqueApiInputs": 648,
+        "duplicateRows": 0,
+        "expectationAudit": {
+          "file": "reports/review-20261003/eight-diagnostic-independent-expectations-final26.json",
+          "sha256": "152a977a91b3f4279cac6a749638cae27a306f0bb072fa2400843da0db1e8268"
+        }
+      },
+      "scope": "selected-point arithmetic only; only exact raw.score projected, no diagnosis/risk/rubric approval.",
+      "sources": [
+        {
+          "contributedPrimaryObservations": {
+            "file": "reports/review-20261003/eight-diagnostic-primary-source-review-final26.json",
+            "sha256": "8e4fe23dcd12fa323c509ec5432d30d841fe378f42ce1b05abc2724fa540481b"
+          },
+          "id": "ariscat",
+          "edition": "Canet et al. Anesthesiology2010;113:1338–1350; DOI10.1097/ALN.0b013e3181fc6e0a",
+          "urls": [
+            "https://www.hospitaldelmar.cat/media/upload_web/pdf/article_Anesthesiology_editora_46_3389_1.pdf"
+          ],
+          "files": [
+            "ariscat2010-system-trust.pdf",
+            "ariscat2010-p9.png",
+            "ariscat2010-p10.png"
+          ],
+          "access": "Original author-hospital PDF retrieved with Windows trusted TLS. Methods and scoring text read; Table6 PDFpage9 and Table7 PDFpage10 rendered and visually read. Python TLS retrieval failure retained.",
+          "population": "2464 surgical patients in59 Catalonian hospitals; adults at least18 receiving general or neuraxial/regional anesthesia, with nonobstetric hospital procedures. Study exclusions include pregnancy/obstetrics, local/peripheral-nerve anesthesia only, procedures outside OR, reoperation within90days, transplantation, preoperative intubation and short ambulatory stay.",
+          "rules": {
+            "age": [
+              0,
+              3,
+              16
+            ],
+            "oxygen": [
+              0,
+              8,
+              24
+            ],
+            "recentRespiratoryInfection": 17,
+            "anemiaHbAtMost10": 11,
+            "incision": [
+              0,
+              15,
+              24
+            ],
+            "duration": [
+              0,
+              16,
+              23
+            ],
+            "emergency": 8
+          },
+          "findings": [
+            {
+              "area": "duration enum labels/formula",
+              "status": "confirmed source-label discrepancy",
+              "source": "Table6 assigns0 to duration≤2h,16 to>2–3h,23 to>3h.",
+              "current": "Current duration options are<2h,2–3h,>3h. Exactly2h is placed in a16-point label rather than the0-point source band."
+            },
+            {
+              "area": "risk and anemia prose",
+              "status": "primary internal discrepancy retained",
+              "source": "Table6 anemia≤10g/dL versus body<10; Table7 high≥45 versus body>45.",
+              "current": "Do not adjudicate risk/body discrepancy using point-sum tests."
+            }
+          ],
+          "notVerified": [
+            "Full clinical rubric/eligibility conformance, inference from continuous values, predictive performance and surgical recommendations. Risk categories/body-table conflict excluded."
+          ],
+          "currentMethodVersion": "ARISCAT/Canet 2010:7 fatores ponderados, população cirúrgica",
+          "currentToolSha256": "5e1c7d02d7df996a783f1d27ffb4fbf3de04de53b8a6786739eaa5790e3ea8a9"
+        }
+      ],
+      "evidencePath": "reports/review-20261003/eight-diagnostic-independent-source-check-final26.json",
+      "evidenceSha256": "9925c0c432d78f268a3a5dd4d52cef5de566b192d5c3de6e7bbd6895eaf9d2b5",
+      "independentPeer": {
+        "status": "passed-scoped-numeric",
+        "evidence": {
+          "file": "reports/review-20261003/eight-diagnostic-numeric-independent-peer-verify-final27.json",
+          "sha256": "e7bddba5c7de286f91fa8c431512f512849302646394d88663afe8142e079a7d"
+        },
+        "scope": "Independent primary table/abstract reading, own selected-point expectations persisted before engines, exact numeric three-adapter Node/isolated Chromium. Clinical/risk/rubric/full-method conformance excluded; McIsaac final-clamp findings retained and excluded from this six-method projection."
+      },
+      "freshAdapterExecutions": 1944,
+      "freshVmExecutions": 1944,
+      "actualBrowserEvidenceScope": "Old actual Chromium receipt uses only website adapter; three adapters have independently completed Node/VM and new Verify Chromium peer. This bank explicitly names original website-only browser observations; no reassignment to other mirrors.",
+      "implementations": [
+        {
+          "id": "ariscat",
+          "app": "website",
+          "file": "apps/website/private/tool-code/ariscat/calculator.js",
+          "sha256": "007083f84a356d340a9c1afc17e19a0c10a849fccb6b6f99ffc4f77106a0b539"
+        },
+        {
+          "id": "ariscat",
+          "app": "dashboard",
+          "file": "apps/dashboard/private/tool-code/ariscat/calculator.js",
+          "sha256": "007083f84a356d340a9c1afc17e19a0c10a849fccb6b6f99ffc4f77106a0b539"
+        },
+        {
+          "id": "ariscat",
+          "app": "command-center",
+          "file": "apps/command-center/private/tool-code/ariscat/calculator.js",
+          "sha256": "007083f84a356d340a9c1afc17e19a0c10a849fccb6b6f99ffc4f77106a0b539"
+        }
+      ],
+      "qualifications": [
+        "Full clinical rubric/eligibility conformance, inference from continuous values, predictive performance and surgical recommendations. Risk categories/body-table conflict excluded.",
+        "Primary-source reading and access are recorded by the contributing source reviewer and independent numeric peer; this integration does not claim another full source reading.",
+        "Only raw.score selected-point arithmetic is included. Clinical categories, main text, private level/verdict/note/rows, prognosis, diagnosis, management and unmeasured feature classification are excluded.",
+        "All source scenarios in this bank and the original donor reports remain retained. Mirror/runtime calculations do not multiply scenario counts. Inline four examples are a subset of the complete downloadable bank.",
+        "Source fields, rubric/edition labels, clinical scope notes and localization changes have separate ownership and must be composed without replacing whole catalogs. All862 historic fixtures/tolerances and approval flags remain unchanged.",
+        "Fresh source/build/packages and browser journey bindings are required before publication. No already-served website or final package proof is claimed by this preparation."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "metadataPackagingPeer": {
+        "status": "passed",
+        "scope": "Bounded independent review of the original source bank and its metadata/helper. Prospective code rebinding is separately re-executed below and requires the final composition peer; no human approval inferred.",
+        "peer": {
+          "file": "reports/review-20261003/six-diagnostic-bank-metadata-independent-review-western-final27.json",
+          "sha256": "8f308a904c18e2d57f6d6b37c660021e399df5bd766589b89c9c03f2fa7d141c"
+        },
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "prospectiveSource27Bindings": [
+        {
+          "file": "apps/website/private/tool-code/ariscat/calculator.js",
+          "sha256": "42ea541ad7130edd57de04fb709ea54dfdd5f7bf3a360561406031247fba8429"
+        },
+        {
+          "file": "apps/dashboard/private/tool-code/ariscat/calculator.js",
+          "sha256": "42ea541ad7130edd57de04fb709ea54dfdd5f7bf3a360561406031247fba8429"
+        },
+        {
+          "file": "apps/command-center/private/tool-code/ariscat/calculator.js",
+          "sha256": "42ea541ad7130edd57de04fb709ea54dfdd5f7bf3a360561406031247fba8429"
+        }
+      ],
+      "prospectiveSource27Replay": {
+        "file": "reports/review-20261003/source27-complete-bank-current-replay-root-r3.json",
+        "sha256": "44c601f27d3d5051a8d55a581381112b58df36c7c4b6cfd24ce1249b263d6a2b"
+      },
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "ARISCAT/Canet 2010, Tabela 6: 7 fatores ponderados; duração ≤ 2 h = 0, > 2 h e ≤ 3 h = 16, > 3 h = 23",
+    "implementationVersion": "ariscat@native-2026-10-04+42ea541ad713",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/21045639/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Idade 51–80 = 3, > 80 = 16 · SatO₂ 91–95% = 8, ≤ 90% = 24 · infecção respiratória no último mês = 17 · Hb ≤ 10 g/dL = 11 · incisão abdominal alta = 15, intratorácica = 24 · duração ≤ 2 h = 0, > 2 h e ≤ 3 h = 16, > 3 h = 23 · emergência = 8.",
+      "inputContract": {
+        "fields": [
+          [
+            "idade",
+            "Idade",
+            "radio",
+            {
+              "opts": {
+                "0": "≤ 50 anos",
+                "3": "51 a 80 anos",
+                "16": "&gt; 80 anos"
+              }
+            }
+          ],
+          [
+            "sat",
+            "SatO₂ pré-operatória (ar ambiente, em repouso)",
+            "radio",
+            {
+              "opts": {
+                "0": "≥ 96%",
+                "8": "91 a 95%",
+                "24": "≤ 90%"
+              }
+            }
+          ],
+          [
+            "infec",
+            "Infecção respiratória no último mês",
+            "chk",
+            {}
+          ],
+          [
+            "anemia",
+            "Anemia pré-operatória (Hb ≤ 10 g/dL)",
+            "chk",
+            {}
+          ],
+          [
+            "incisao",
+            "Local da incisão",
+            "radio",
+            {
+              "opts": {
+                "0": "Periférica",
+                "15": "Abdominal alta",
+                "24": "Intratorácica"
+              }
+            }
+          ],
+          [
+            "duracao",
+            "Duração da cirurgia",
+            "radio",
+            {
+              "opts": {
+                "0": "≤ 2 h",
+                "16": "&gt; 2 h e ≤ 3 h",
+                "23": "&gt; 3 h"
+              }
+            }
+          ],
+          [
+            "emerg",
+            "Cirurgia de emergência",
+            "chk",
+            {}
+          ]
+        ],
+        "hash": "ff1ac7910546524bb0d5aa2d3281d172a9910e139dbd201c704c9ee1c34e7e75"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Canet J et al. Prediction of postoperative pulmonary complications in a population-based surgical cohort. Anesthesiology, 2010.",
+          "url": "https://doi.org/10.1097/ALN.0b013e3181fc6e0a",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Prediction of postoperative pulmonary complications in a population-based surgical cohort.",
+            "year": "2010",
+            "firstPublicationDate": "2010-12-01",
+            "doi": "10.1097/aln.0b013e3181fc6e0a",
+            "pmid": "21045639",
+            "journal": "Anesthesiology",
+            "authors": "Canet J, Gallart L, Gomar C, Paluzie G, Vallès J, Castillo J, Sabaté S, Mazo V, Briones Z, Sanchis J, ARISCAT Group."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/21045639/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "abd0fa4d70a04631c2b5d163711cb9067e5c4228d3f76d301078884925d43550",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T19:23:48.162Z",
+        "total": 648,
+        "passed": 648,
+        "sourceRowCount": 648,
+        "uniqueApiInputCount": 648,
+        "sourceContextCount": 648,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "c7ce89cad55eeb4ef03d3b7da11357507ddd9cbaf54216678c54599624db3732",
+          "total": 648,
+          "bankRowCount": 648,
+          "uniqueApiInputCount": 648,
+          "sourceContextCount": 648,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/eight-diagnostic-independent-expectations-final26.json",
+              "sha256": "152a977a91b3f4279cac6a749638cae27a306f0bb072fa2400843da0db1e8268"
+            },
+            {
+              "file": "reports/review-20261003/eight-diagnostic-primary-source-review-final26.json",
+              "sha256": "8e4fe23dcd12fa323c509ec5432d30d841fe378f42ce1b05abc2724fa540481b"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/eight-diagnostic-independent-source-check-final26.json",
+            "sha256": "9925c0c432d78f268a3a5dd4d52cef5de566b192d5c3de6e7bbd6895eaf9d2b5"
+          },
+          "packagingRequirement": "Compose separately owned source/rubric/edition changes and fresh build/package/browser bindings before publication."
+        },
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "sourceRows": 648,
+          "uniqueApiInputs": 648,
+          "duplicateRows": 0,
+          "expectationAudit": {
+            "file": "reports/review-20261003/eight-diagnostic-independent-expectations-final26.json",
+            "sha256": "152a977a91b3f4279cac6a749638cae27a306f0bb072fa2400843da0db1e8268"
+          }
+        },
+        "scope": "selected-point arithmetic only; only exact raw.score projected, no diagnosis/risk/rubric approval.",
+        "sources": [
+          {
+            "contributedPrimaryObservations": {
+              "file": "reports/review-20261003/eight-diagnostic-primary-source-review-final26.json",
+              "sha256": "8e4fe23dcd12fa323c509ec5432d30d841fe378f42ce1b05abc2724fa540481b"
+            },
+            "id": "ariscat",
+            "edition": "Canet et al. Anesthesiology2010;113:1338–1350; DOI10.1097/ALN.0b013e3181fc6e0a",
+            "urls": [
+              "https://www.hospitaldelmar.cat/media/upload_web/pdf/article_Anesthesiology_editora_46_3389_1.pdf"
+            ],
+            "files": [
+              "ariscat2010-system-trust.pdf",
+              "ariscat2010-p9.png",
+              "ariscat2010-p10.png"
+            ],
+            "access": "Original author-hospital PDF retrieved with Windows trusted TLS. Methods and scoring text read; Table6 PDFpage9 and Table7 PDFpage10 rendered and visually read. Python TLS retrieval failure retained.",
+            "population": "2464 surgical patients in59 Catalonian hospitals; adults at least18 receiving general or neuraxial/regional anesthesia, with nonobstetric hospital procedures. Study exclusions include pregnancy/obstetrics, local/peripheral-nerve anesthesia only, procedures outside OR, reoperation within90days, transplantation, preoperative intubation and short ambulatory stay.",
+            "rules": {
+              "age": [
+                0,
+                3,
+                16
+              ],
+              "oxygen": [
+                0,
+                8,
+                24
+              ],
+              "recentRespiratoryInfection": 17,
+              "anemiaHbAtMost10": 11,
+              "incision": [
+                0,
+                15,
+                24
+              ],
+              "duration": [
+                0,
+                16,
+                23
+              ],
+              "emergency": 8
+            },
+            "findings": [
+              {
+                "area": "duration enum labels/formula",
+                "status": "confirmed source-label discrepancy",
+                "source": "Table6 assigns0 to duration≤2h,16 to>2–3h,23 to>3h.",
+                "current": "Current duration options are<2h,2–3h,>3h. Exactly2h is placed in a16-point label rather than the0-point source band."
+              },
+              {
+                "area": "risk and anemia prose",
+                "status": "primary internal discrepancy retained",
+                "source": "Table6 anemia≤10g/dL versus body<10; Table7 high≥45 versus body>45.",
+                "current": "Do not adjudicate risk/body discrepancy using point-sum tests."
+              }
+            ],
+            "notVerified": [
+              "Full clinical rubric/eligibility conformance, inference from continuous values, predictive performance and surgical recommendations. Risk categories/body-table conflict excluded."
+            ],
+            "currentMethodVersion": "ARISCAT/Canet 2010:7 fatores ponderados, população cirúrgica",
+            "currentToolSha256": "5e1c7d02d7df996a783f1d27ffb4fbf3de04de53b8a6786739eaa5790e3ea8a9"
+          }
+        ],
+        "evidencePath": "reports/review-20261003/eight-diagnostic-independent-source-check-final26.json",
+        "evidenceSha256": "9925c0c432d78f268a3a5dd4d52cef5de566b192d5c3de6e7bbd6895eaf9d2b5",
+        "independentPeer": {
+          "status": "passed-scoped-numeric",
+          "evidence": {
+            "file": "reports/review-20261003/eight-diagnostic-numeric-independent-peer-verify-final27.json",
+            "sha256": "e7bddba5c7de286f91fa8c431512f512849302646394d88663afe8142e079a7d"
+          },
+          "scope": "Independent primary table/abstract reading, own selected-point expectations persisted before engines, exact numeric three-adapter Node/isolated Chromium. Clinical/risk/rubric/full-method conformance excluded; McIsaac final-clamp findings retained and excluded from this six-method projection."
+        },
+        "freshAdapterExecutions": 1944,
+        "freshVmExecutions": 1944,
+        "actualBrowserEvidenceScope": "Old actual Chromium receipt uses only website adapter; three adapters have independently completed Node/VM and new Verify Chromium peer. This bank explicitly names original website-only browser observations; no reassignment to other mirrors.",
+        "implementations": [
+          {
+            "id": "ariscat",
+            "app": "website",
+            "file": "apps/website/private/tool-code/ariscat/calculator.js",
+            "sha256": "007083f84a356d340a9c1afc17e19a0c10a849fccb6b6f99ffc4f77106a0b539"
+          },
+          {
+            "id": "ariscat",
+            "app": "dashboard",
+            "file": "apps/dashboard/private/tool-code/ariscat/calculator.js",
+            "sha256": "007083f84a356d340a9c1afc17e19a0c10a849fccb6b6f99ffc4f77106a0b539"
+          },
+          {
+            "id": "ariscat",
+            "app": "command-center",
+            "file": "apps/command-center/private/tool-code/ariscat/calculator.js",
+            "sha256": "007083f84a356d340a9c1afc17e19a0c10a849fccb6b6f99ffc4f77106a0b539"
+          }
+        ],
+        "qualifications": [
+          "Full clinical rubric/eligibility conformance, inference from continuous values, predictive performance and surgical recommendations. Risk categories/body-table conflict excluded.",
+          "Primary-source reading and access are recorded by the contributing source reviewer and independent numeric peer; this integration does not claim another full source reading.",
+          "Only raw.score selected-point arithmetic is included. Clinical categories, main text, private level/verdict/note/rows, prognosis, diagnosis, management and unmeasured feature classification are excluded.",
+          "All source scenarios in this bank and the original donor reports remain retained. Mirror/runtime calculations do not multiply scenario counts. Inline four examples are a subset of the complete downloadable bank.",
+          "Source fields, rubric/edition labels, clinical scope notes and localization changes have separate ownership and must be composed without replacing whole catalogs. All862 historic fixtures/tolerances and approval flags remain unchanged.",
+          "Fresh source/build/packages and browser journey bindings are required before publication. No already-served website or final package proof is claimed by this preparation."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "metadataPackagingPeer": {
+          "status": "passed",
+          "scope": "Bounded independent review of the original source bank and its metadata/helper. Prospective code rebinding is separately re-executed below and requires the final composition peer; no human approval inferred.",
+          "peer": {
+            "file": "reports/review-20261003/six-diagnostic-bank-metadata-independent-review-western-final27.json",
+            "sha256": "8f308a904c18e2d57f6d6b37c660021e399df5bd766589b89c9c03f2fa7d141c"
+          },
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "prospectiveSource27Bindings": [
+          {
+            "file": "apps/website/private/tool-code/ariscat/calculator.js",
+            "sha256": "42ea541ad7130edd57de04fb709ea54dfdd5f7bf3a360561406031247fba8429"
+          },
+          {
+            "file": "apps/dashboard/private/tool-code/ariscat/calculator.js",
+            "sha256": "42ea541ad7130edd57de04fb709ea54dfdd5f7bf3a360561406031247fba8429"
+          },
+          {
+            "file": "apps/command-center/private/tool-code/ariscat/calculator.js",
+            "sha256": "42ea541ad7130edd57de04fb709ea54dfdd5f7bf3a360561406031247fba8429"
+          }
+        ],
+        "prospectiveSource27Replay": {
+          "file": "reports/review-20261003/source27-complete-bank-current-replay-root-r3.json",
+          "sha256": "44c601f27d3d5051a8d55a581381112b58df36c7c4b6cfd24ce1249b263d6a2b"
+        },
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "42ea541ad7130edd57de04fb709ea54dfdd5f7bf3a360561406031247fba8429",
+      "diagnosticRubricSourceAmendment": {
+        "at": "2026-10-04T18:59:19.497Z",
+        "scope": "Source-documentation and selected label-only amendment; no engine or integer point code change. Private TOOL labels retain their prior source hash and are explicitly outside this candidate.",
+        "proposal": {
+          "file": "eight-diagnostic-source-rubric-proposal-final27-r4.json",
+          "sha256": "d31091eebbc461e5ceffa09c589d05aa2ef3056f08382eadcaceeb8e6b038355"
+        },
+        "authoredSource": {
+          "file": "eight-diagnostic-source-rubric-authored-final27-v3.cjs",
+          "sha256": "ee9d439300f946173be86160cc909fbef0a09de6ca5ca54fb9ef674a32887972"
+        },
+        "sourceReview": {
+          "file": "eight-diagnostic-primary-source-review-final26.json",
+          "sha256": "8e4fe23dcd12fa323c509ec5432d30d841fe378f42ce1b05abc2724fa540481b"
+        },
+        "previousMethodVersion": "ARISCAT/Canet 2010:7 fatores ponderados, população cirúrgica",
+        "previousFormulaSha256": "90c7abc1274f63cc34bd8583aaefdf64558484495de79ae9119911c2910d8248",
+        "previousFieldsSha256": "d74f4daf35fb96b90e9583158d8bcf0628081844690bbba1872987785ae4210b",
+        "previousLimitsSha256": "6194f4971e8b62b318fb51a18428165cf4b2fd048ba7b523312bd9a87deb1a29",
+        "previousInputContract": {
+          "fields": [
+            {
+              "key": "idade",
+              "label": "Idade",
+              "type": "radio",
+              "optional": false,
+              "options": {
+                "0": "≤ 50 anos",
+                "3": "51 a 80 anos",
+                "16": "&gt; 80 anos"
+              }
+            },
+            {
+              "key": "sat",
+              "label": "SatO₂ pré-operatória (ar ambiente, em repouso)",
+              "type": "radio",
+              "optional": false,
+              "options": {
+                "0": "≥ 96%",
+                "8": "91 a 95%",
+                "24": "≤ 90%"
+              }
+            },
+            {
+              "key": "infec",
+              "label": "Infecção respiratória no último mês",
+              "type": "chk",
+              "optional": false,
+              "options": null
+            },
+            {
+              "key": "anemia",
+              "label": "Anemia pré-operatória (Hb ≤ 10 g/dL)",
+              "type": "chk",
+              "optional": false,
+              "options": null
+            },
+            {
+              "key": "incisao",
+              "label": "Local da incisão",
+              "type": "radio",
+              "optional": false,
+              "options": {
+                "0": "Periférica",
+                "15": "Abdominal alta",
+                "24": "Intratorácica"
+              }
+            },
+            {
+              "key": "duracao",
+              "label": "Duração da cirurgia",
+              "type": "radio",
+              "optional": false,
+              "options": {
+                "0": "&lt; 2 h",
+                "16": "2 a 3 h",
+                "23": "&gt; 3 h"
+              }
+            },
+            {
+              "key": "emerg",
+              "label": "Cirurgia de emergência",
+              "type": "chk",
+              "optional": false,
+              "options": null
+            }
+          ],
+          "hash": "8e33de1ed931387483fe473f678381006476d8a612f8f6aa9d5705bf7f69ecd2"
+        },
+        "previousImplementedVariant": "Idade 51–80 = 3, > 80 = 16 · SatO₂ 91–95% = 8, ≤ 90% = 24 · infecção respiratória no último mês = 17 · Hb ≤ 10 g/dL = 11 · incisão abdominal alta = 15, intratorácica = 24 · duração 2–3 h = 16, > 3 h = 23 · emergência = 8.",
+        "implementationHashUnchanged": "007083f84a356d340a9c1afc17e19a0c10a849fccb6b6f99ffc4f77106a0b539",
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "releaseApproval": "not-performed",
+        "fullMethodConformance": false
+      },
+      "previousImplementationHash": "007083f84a356d340a9c1afc17e19a0c10a849fccb6b6f99ffc4f77106a0b539",
+      "previousInputContract": {
+        "fields": [
+          {
+            "key": "idade",
+            "label": "Idade",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "≤ 50 anos",
+              "3": "51 a 80 anos",
+              "16": "&gt; 80 anos"
+            }
+          },
+          {
+            "key": "sat",
+            "label": "SatO₂ pré-operatória (ar ambiente, em repouso)",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "≥ 96%",
+              "8": "91 a 95%",
+              "24": "≤ 90%"
+            }
+          },
+          {
+            "key": "infec",
+            "label": "Infecção respiratória no último mês",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "anemia",
+            "label": "Anemia pré-operatória (Hb ≤ 10 g/dL)",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "incisao",
+            "label": "Local da incisão",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Periférica",
+              "15": "Abdominal alta",
+              "24": "Intratorácica"
+            }
+          },
+          {
+            "key": "duracao",
+            "label": "Duração da cirurgia",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "≤ 2 h",
+              "16": "&gt; 2 h e ≤ 3 h",
+              "23": "&gt; 3 h"
+            }
+          },
+          {
+            "key": "emerg",
+            "label": "Cirurgia de emergência",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          }
+        ],
+        "hash": "27f3d08e712c8bc6581066826e4f230eb14c53c42e18dbf7559b977be836b24a"
+      }
+    },
+    "limits": "O ARISCAT 2010 foi derivado e validado em uma coorte de 2464 pacientes cirúrgicos de 59 hospitais, com anestesia geral, neuraxial ou regional, e desfecho de complicações pulmonares pós-operatórias. A idade mínima, exclusões e pesos/faixas completos não estão disponíveis no resumo lido; as taxas da coorte não constituem uma estimativa individual recalibrada para outra população. Na nova leitura do artigo original de 2010, os Métodos descrevem adultos com pelo menos 18 anos e exclusões próprias da coorte; a Tabela 6 confirma duração ≤2 h, >2 a ≤3 h e >3 h. A fronteira de alto risco aparece como ≥45 na Tabela 7 e >45 no texto; essa divergência documental não foi adjudicada aqui.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.734Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "O resumo não traz idade mínima/exclusões nem os pesos/faixas dos sete fatores. Taxas da coorte não são uma probabilidade individual automaticamente recalibrada."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "diagnosticRubricSourceAmendment": {
+        "at": "2026-10-04T18:59:19.497Z",
+        "sourceReview": {
+          "file": "eight-diagnostic-primary-source-review-final26.json",
+          "sha256": "8e4fe23dcd12fa323c509ec5432d30d841fe378f42ce1b05abc2724fa540481b"
+        },
+        "noteSourceSha256": "246cd89afdf870a566022049e9d36a01104a6ef51e3e2a974faf9b9cd965e52c",
+        "previousLimitsSha256": "6194f4971e8b62b318fb51a18428165cf4b2fd048ba7b523312bd9a87deb1a29",
+        "previousEvidencePreserved": true,
+        "scope": "Named additional source sections and explicit remaining source/categorical limitations only; no full method/clinical approval.",
+        "unresolved": [
+          "Table7 high-risk ≥45 differs from original scoring prose >45. The preoperative Hb boundary also differs across source sections; neither is adjudicated by this label-only candidate."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "rightsApproval": "not-performed"
+      }
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/ariscat/calculator.js",
+    "bytes": 5274,
+    "sha256": "42ea541ad7130edd57de04fb709ea54dfdd5f7bf3a360561406031247fba8429"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "be4f6660b0554f76c1141d6beff1aef6c1313b46da52370fed9a37c126defdc2",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "a9795aba818d242ec1c7b5dcf3e0747d1ee45ab65e24d241e37963f0b736fa83",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "a9795aba818d242ec1c7b5dcf3e0747d1ee45ab65e24d241e37963f0b736fa83",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

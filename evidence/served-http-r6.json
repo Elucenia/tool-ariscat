@@ -1,0 +1,897 @@
+{
+  "schema": "elucenia-native-tool-actual-r6-local-HTTP-subset-r5",
+  "id": "ariscat",
+  "sourceReceipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r6-all-calculators-http-results.json",
+    "bytes": 7105396,
+    "sha256": "c0b1e4dc320ce807e78c0444e629c1269b545b6e2ac87c265d896073d8c34ecb"
+  },
+  "servedBuildId": "jN-2wbRrarMjYPwdPnRHh",
+  "checker": {
+    "file": "reports/review-20261005-completion/deploy-lock/verify-r6-all-calculators-http.cjs",
+    "sha256": "92411a9e01fe36e1bf380c3336f2171bdb523a02ff09683da75927b12b33b3fa",
+    "bytes": 20735
+  },
+  "health": {
+    "url": "http://127.0.0.1:3067/api/health",
+    "startedAt": "2026-10-05T17:35:43.039Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json",
+      "retryAfter": null,
+      "cacheControl": "no-store",
+      "nosniff": "nosniff"
+    },
+    "body": {
+      "status": "ok",
+      "application": "ELUCENIA",
+      "framework": "Next.js",
+      "version": "1.0.0"
+    },
+    "responseSha256": "65f95645e7826371eb2d9d3f96e0fed52ea4b88c77203f0cf2511769e57cd108",
+    "bytes": 80,
+    "elapsedMs": 27.345699999999994
+  },
+  "identity": {
+    "url": "http://127.0.0.1:3067/_next/data/jN-2wbRrarMjYPwdPnRHh/en/tools.json",
+    "startedAt": "2026-10-05T17:35:43.068Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "cacheControl": "s-maxage=31536000",
+      "nosniff": "nosniff"
+    },
+    "responseSha256": "404601e2c283a588a2f41af4feb5113d1993f76cc22f73a7b8ef4f5d17a82fa8",
+    "bytes": 103853,
+    "elapsedMs": 14.542600000000007,
+    "semanticMatchWithCompiledCatalog": true
+  },
+  "sourceCalculator": {
+    "file": "deliveries/elucenia-next-hostinger-r6/private/tool-code/ariscat/calculator.js",
+    "sha256": "42ea541ad7130edd57de04fb709ea54dfdd5f7bf3a360561406031247fba8429",
+    "bytes": 5274
+  },
+  "sourceCalculatorMatchesCurrentCandidate": true,
+  "toolStatus": {
+    "cases": 4,
+    "replayed": 4,
+    "passed": 4,
+    "failed": 0,
+    "status": "passed"
+  },
+  "cases": [
+    {
+      "id": "ariscat",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
+      "originalInput": {
+        "idade": "3",
+        "sat": "0",
+        "incisao": "0",
+        "duracao": "0"
+      },
+      "input": {
+        "idade": "3",
+        "sat": "0",
+        "incisao": "0",
+        "duracao": "0",
+        "infec": false,
+        "anemia": false,
+        "emerg": false
+      },
+      "amendments": [
+        {
+          "field": "infec",
+          "kind": "recorded-implicit-negative-materialized",
+          "value": false
+        },
+        {
+          "field": "anemia",
+          "kind": "recorded-implicit-negative-materialized",
+          "value": false
+        },
+        {
+          "field": "emerg",
+          "kind": "recorded-implicit-negative-materialized",
+          "value": false
+        }
+      ],
+      "expected": {
+        "score": 3,
+        "level": "low"
+      },
+      "recordedResult": {
+        "main": [
+          "3",
+          "pontos"
+        ],
+        "label": "ARISCAT",
+        "raw": {
+          "score": 3
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/ariscat/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "idade": "3",
+            "sat": "0",
+            "incisao": "0",
+            "duracao": "0",
+            "infec": false,
+            "anemia": false,
+            "emerg": false
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/ariscat/calculate",
+          "startedAt": "2026-10-05T17:35:53.251Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "ariscat",
+              "main": [
+                "3",
+                "pontos"
+              ],
+              "label": "ARISCAT",
+              "raw": {
+                "score": 3
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "9b3b2e39b4c31be93cd2357936b1b77e0a31ff43d6a5491dc8a95801aa96ecd3",
+          "bytes": 122,
+          "elapsedMs": 4.1939000000002125
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/ariscat/calculate",
+        "startedAt": "2026-10-05T17:35:53.251Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "ariscat",
+            "main": [
+              "3",
+              "pontos"
+            ],
+            "label": "ARISCAT",
+            "raw": {
+              "score": 3
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "9b3b2e39b4c31be93cd2357936b1b77e0a31ff43d6a5491dc8a95801aa96ecd3",
+        "bytes": 122,
+        "elapsedMs": 4.1939000000002125
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.score",
+            "expected": 3,
+            "obtained": 3,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.score",
+            "expected": 3,
+            "obtained": 3,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "3",
+            "obtained": "3",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "pontos",
+            "obtained": "pontos",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "ariscat",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
+      "originalInput": {
+        "idade": "3",
+        "sat": "8",
+        "incisao": "15",
+        "duracao": "0"
+      },
+      "input": {
+        "idade": "3",
+        "sat": "8",
+        "incisao": "15",
+        "duracao": "0",
+        "infec": false,
+        "anemia": false,
+        "emerg": false
+      },
+      "amendments": [
+        {
+          "field": "infec",
+          "kind": "recorded-implicit-negative-materialized",
+          "value": false
+        },
+        {
+          "field": "anemia",
+          "kind": "recorded-implicit-negative-materialized",
+          "value": false
+        },
+        {
+          "field": "emerg",
+          "kind": "recorded-implicit-negative-materialized",
+          "value": false
+        }
+      ],
+      "expected": {
+        "score": 26,
+        "level": "mid"
+      },
+      "recordedResult": {
+        "main": [
+          "26",
+          "pontos"
+        ],
+        "label": "ARISCAT",
+        "raw": {
+          "score": 26
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/ariscat/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "idade": "3",
+            "sat": "8",
+            "incisao": "15",
+            "duracao": "0",
+            "infec": false,
+            "anemia": false,
+            "emerg": false
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/ariscat/calculate",
+          "startedAt": "2026-10-05T17:35:53.565Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "ariscat",
+              "main": [
+                "26",
+                "pontos"
+              ],
+              "label": "ARISCAT",
+              "raw": {
+                "score": 26
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "b6a0c0a1da3f92e7c226cd8d39184070f192b7e79034555abfe036523af2ac30",
+          "bytes": 124,
+          "elapsedMs": 4.121300000000701
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/ariscat/calculate",
+        "startedAt": "2026-10-05T17:35:53.565Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "ariscat",
+            "main": [
+              "26",
+              "pontos"
+            ],
+            "label": "ARISCAT",
+            "raw": {
+              "score": 26
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "b6a0c0a1da3f92e7c226cd8d39184070f192b7e79034555abfe036523af2ac30",
+        "bytes": 124,
+        "elapsedMs": 4.121300000000701
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.score",
+            "expected": 26,
+            "obtained": 26,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.score",
+            "expected": 26,
+            "obtained": 26,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "26",
+            "obtained": "26",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "pontos",
+            "obtained": "pontos",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "ariscat",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
+      "originalInput": {
+        "idade": "3",
+        "sat": "0",
+        "incisao": "15",
+        "duracao": "16"
+      },
+      "input": {
+        "idade": "3",
+        "sat": "0",
+        "incisao": "15",
+        "duracao": "16",
+        "infec": false,
+        "anemia": false,
+        "emerg": false
+      },
+      "amendments": [
+        {
+          "field": "infec",
+          "kind": "recorded-implicit-negative-materialized",
+          "value": false
+        },
+        {
+          "field": "anemia",
+          "kind": "recorded-implicit-negative-materialized",
+          "value": false
+        },
+        {
+          "field": "emerg",
+          "kind": "recorded-implicit-negative-materialized",
+          "value": false
+        }
+      ],
+      "expected": {
+        "score": 34,
+        "level": "mid"
+      },
+      "recordedResult": {
+        "main": [
+          "34",
+          "pontos"
+        ],
+        "label": "ARISCAT",
+        "raw": {
+          "score": 34
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/ariscat/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "idade": "3",
+            "sat": "0",
+            "incisao": "15",
+            "duracao": "16",
+            "infec": false,
+            "anemia": false,
+            "emerg": false
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/ariscat/calculate",
+          "startedAt": "2026-10-05T17:35:53.878Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "ariscat",
+              "main": [
+                "34",
+                "pontos"
+              ],
+              "label": "ARISCAT",
+              "raw": {
+                "score": 34
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "cb761626ca106677c31b4c6533891c7972b516ca543f1319d60dfc6821c96124",
+          "bytes": 124,
+          "elapsedMs": 2.558100000000195
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/ariscat/calculate",
+        "startedAt": "2026-10-05T17:35:53.878Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "ariscat",
+            "main": [
+              "34",
+              "pontos"
+            ],
+            "label": "ARISCAT",
+            "raw": {
+              "score": 34
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "cb761626ca106677c31b4c6533891c7972b516ca543f1319d60dfc6821c96124",
+        "bytes": 124,
+        "elapsedMs": 2.558100000000195
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.score",
+            "expected": 34,
+            "obtained": 34,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.score",
+            "expected": 34,
+            "obtained": 34,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "34",
+            "obtained": "34",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "pontos",
+            "obtained": "pontos",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "ariscat",
+      "kind": "native-source-reference",
+      "index": 3,
+      "name": "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
+      "originalInput": {
+        "idade": "16",
+        "sat": "8",
+        "incisao": "15",
+        "duracao": "23"
+      },
+      "input": {
+        "idade": "16",
+        "sat": "8",
+        "incisao": "15",
+        "duracao": "23",
+        "infec": false,
+        "anemia": false,
+        "emerg": false
+      },
+      "amendments": [
+        {
+          "field": "infec",
+          "kind": "recorded-implicit-negative-materialized",
+          "value": false
+        },
+        {
+          "field": "anemia",
+          "kind": "recorded-implicit-negative-materialized",
+          "value": false
+        },
+        {
+          "field": "emerg",
+          "kind": "recorded-implicit-negative-materialized",
+          "value": false
+        }
+      ],
+      "expected": {
+        "score": 62,
+        "level": "high"
+      },
+      "recordedResult": {
+        "main": [
+          "62",
+          "pontos"
+        ],
+        "label": "ARISCAT",
+        "raw": {
+          "score": 62
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/ariscat/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "idade": "16",
+            "sat": "8",
+            "incisao": "15",
+            "duracao": "23",
+            "infec": false,
+            "anemia": false,
+            "emerg": false
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/ariscat/calculate",
+          "startedAt": "2026-10-05T17:35:54.179Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "ariscat",
+              "main": [
+                "62",
+                "pontos"
+              ],
+              "label": "ARISCAT",
+              "raw": {
+                "score": 62
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "44e92efc783e57d85e39b5960d4ccd45f9f94ed254a452cb6f1cf9ac3003db99",
+          "bytes": 124,
+          "elapsedMs": 2.967899999999645
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/ariscat/calculate",
+        "startedAt": "2026-10-05T17:35:54.179Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "ariscat",
+            "main": [
+              "62",
+              "pontos"
+            ],
+            "label": "ARISCAT",
+            "raw": {
+              "score": 62
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "44e92efc783e57d85e39b5960d4ccd45f9f94ed254a452cb6f1cf9ac3003db99",
+        "bytes": 124,
+        "elapsedMs": 2.967899999999645
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.score",
+            "expected": 62,
+            "obtained": 62,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.score",
+            "expected": 62,
+            "obtained": 62,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "62",
+            "obtained": "62",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "pontos",
+            "obtained": "pontos",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "predictProstateHasSeparateFullCurveOracleReplay": true,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r6 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false,
+  "newIndependentOracle": false,
+  "actualBrowserJourney": false,
+  "hostingerDeploymentVerified": false
+}

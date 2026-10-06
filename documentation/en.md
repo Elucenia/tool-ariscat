@@ -95,3 +95,35 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+Low risk (< 26): 1.6% pulmonary complications
+
+Usual care.
+
+
+### 2
+
+Intermediate risk (26 to 44): 13.3% pulmonary complications
+
+Consider lung-protective strategies and respiratory physiotherapy.
+
+
+### 3
+
+Intermediate risk (26 to 44): 13.3% pulmonary complications
+
+Consider lung-protective strategies and respiratory physiotherapy.
+
+
+### 4
+
+High risk (≥ 45): 42.1% pulmonary complications
+
+Optimize before surgery, protective ventilation, cough-sparing analgesia and early mobilization.
+

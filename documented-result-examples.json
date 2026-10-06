@@ -1,0 +1,707 @@
+{
+  "id": "ariscat",
+  "implementationVersion": "ariscat@native-2026-10-05+b7d49e682f76",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Baixo risco (< 26): 1,6% de complicações pulmonares",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Cuidados habituais.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Risco intermediário (26 a 44): 13,3% de complicações pulmonares",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Considerar estratégias de proteção pulmonar e fisioterapia respiratória.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Risco intermediário (26 a 44): 13,3% de complicações pulmonares",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Considerar estratégias de proteção pulmonar e fisioterapia respiratória.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Alto risco (≥ 45): 42,1% de complicações pulmonares",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Otimizar antes da cirurgia, ventilação protetora, analgesia que poupe a tosse e mobilização precoce.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Low risk (< 26): 1.6% pulmonary complications",
+            "locale": "en",
+            "template": "documented-authored-139457fa72bc1ee5ebf7"
+          },
+          "note": {
+            "text": "Usual care.",
+            "locale": "en",
+            "template": "documented-authored-c6f4dff4aeb45f30c387"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Intermediate risk (26 to 44): 13.3% pulmonary complications",
+            "locale": "en",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "Consider lung-protective strategies and respiratory physiotherapy.",
+            "locale": "en",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Intermediate risk (26 to 44): 13.3% pulmonary complications",
+            "locale": "en",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "Consider lung-protective strategies and respiratory physiotherapy.",
+            "locale": "en",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "High risk (≥ 45): 42.1% pulmonary complications",
+            "locale": "en",
+            "template": "documented-authored-5fe26863855176d75328"
+          },
+          "note": {
+            "text": "Optimize before surgery, protective ventilation, cough-sparing analgesia and early mobilization.",
+            "locale": "en",
+            "template": "documented-authored-0b486628d7faf4891338"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Riesgo bajo (< 26): 1,6% de complicaciones pulmonares",
+            "locale": "es",
+            "template": "documented-authored-139457fa72bc1ee5ebf7"
+          },
+          "note": {
+            "text": "Cuidados habituales.",
+            "locale": "es",
+            "template": "documented-authored-c6f4dff4aeb45f30c387"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Riesgo intermedio (26 a 44): 13,3% de complicaciones pulmonares",
+            "locale": "es",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "Considerar estrategias de protección pulmonar y fisioterapia respiratoria.",
+            "locale": "es",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Riesgo intermedio (26 a 44): 13,3% de complicaciones pulmonares",
+            "locale": "es",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "Considerar estrategias de protección pulmonar y fisioterapia respiratoria.",
+            "locale": "es",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Riesgo alto (≥ 45): 42,1% de complicaciones pulmonares",
+            "locale": "es",
+            "template": "documented-authored-5fe26863855176d75328"
+          },
+          "note": {
+            "text": "Optimizar antes de la cirugía, ventilación protectora, analgesia que ahorre la tos y movilización precoz.",
+            "locale": "es",
+            "template": "documented-authored-0b486628d7faf4891338"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Faible risque (< 26) : 1,6 % de complications pulmonaires",
+            "locale": "fr",
+            "template": "documented-authored-139457fa72bc1ee5ebf7"
+          },
+          "note": {
+            "text": "Soins habituels.",
+            "locale": "fr",
+            "template": "documented-authored-c6f4dff4aeb45f30c387"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Risque intermédiaire (26 à 44) : 13,3 % de complications pulmonaires",
+            "locale": "fr",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "Envisager des stratégies de protection pulmonaire et une kinésithérapie respiratoire.",
+            "locale": "fr",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Risque intermédiaire (26 à 44) : 13,3 % de complications pulmonaires",
+            "locale": "fr",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "Envisager des stratégies de protection pulmonaire et une kinésithérapie respiratoire.",
+            "locale": "fr",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Risque élevé (≥ 45) : 42,1 % de complications pulmonaires",
+            "locale": "fr",
+            "template": "documented-authored-5fe26863855176d75328"
+          },
+          "note": {
+            "text": "Optimiser avant la chirurgie, ventilation protectrice, analgésie épargnant la toux et mobilisation précoce.",
+            "locale": "fr",
+            "template": "documented-authored-0b486628d7faf4891338"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Niedriges Risiko (< 26): 1,6 % pulmonale Komplikationen",
+            "locale": "de",
+            "template": "documented-authored-139457fa72bc1ee5ebf7"
+          },
+          "note": {
+            "text": "Übliche Versorgung.",
+            "locale": "de",
+            "template": "documented-authored-c6f4dff4aeb45f30c387"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mittleres Risiko (26 bis 44): 13,3 % pulmonale Komplikationen",
+            "locale": "de",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "Lungenschützende Strategien und Atemphysiotherapie erwägen.",
+            "locale": "de",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mittleres Risiko (26 bis 44): 13,3 % pulmonale Komplikationen",
+            "locale": "de",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "Lungenschützende Strategien und Atemphysiotherapie erwägen.",
+            "locale": "de",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Hohes Risiko (≥ 45): 42,1 % pulmonale Komplikationen",
+            "locale": "de",
+            "template": "documented-authored-5fe26863855176d75328"
+          },
+          "note": {
+            "text": "Vor der Operation optimieren, protektive Beatmung, hustenvermeidende Analgesie und frühe Mobilisierung.",
+            "locale": "de",
+            "template": "documented-authored-0b486628d7faf4891338"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Basso rischio (< 26): 1,6% di complicanze polmonari",
+            "locale": "it",
+            "template": "documented-authored-139457fa72bc1ee5ebf7"
+          },
+          "note": {
+            "text": "Cure usuali.",
+            "locale": "it",
+            "template": "documented-authored-c6f4dff4aeb45f30c387"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Rischio intermedio (26 a 44): 13,3% di complicanze polmonari",
+            "locale": "it",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "Considerare strategie di protezione polmonare e fisioterapia respiratoria.",
+            "locale": "it",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Rischio intermedio (26 a 44): 13,3% di complicanze polmonari",
+            "locale": "it",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "Considerare strategie di protezione polmonare e fisioterapia respiratoria.",
+            "locale": "it",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Rischio alto (≥ 45): 42,1% di complicanze polmonari",
+            "locale": "it",
+            "template": "documented-authored-5fe26863855176d75328"
+          },
+          "note": {
+            "text": "Ottimizzare prima dell'intervento, ventilazione protettiva, analgesia che risparmi la tosse e mobilizzazione precoce.",
+            "locale": "it",
+            "template": "documented-authored-0b486628d7faf4891338"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "خطورة منخفضة (< 26): 1,6% من المضاعفات الرئوية",
+            "locale": "ar",
+            "template": "documented-authored-139457fa72bc1ee5ebf7"
+          },
+          "note": {
+            "text": "الرعاية المعتادة.",
+            "locale": "ar",
+            "template": "documented-authored-c6f4dff4aeb45f30c387"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "خطورة متوسطة (26 إلى 44): 13,3% من المضاعفات الرئوية",
+            "locale": "ar",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "النظر في استراتيجيات الحماية الرئوية والعلاج الطبيعي التنفسي.",
+            "locale": "ar",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "خطورة متوسطة (26 إلى 44): 13,3% من المضاعفات الرئوية",
+            "locale": "ar",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "النظر في استراتيجيات الحماية الرئوية والعلاج الطبيعي التنفسي.",
+            "locale": "ar",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "خطورة عالية (≥ 45): 42,1% من المضاعفات الرئوية",
+            "locale": "ar",
+            "template": "documented-authored-5fe26863855176d75328"
+          },
+          "note": {
+            "text": "التحضير الأمثل قبل الجراحة، والتهوية الوقائية، والتسكين الذي يقلل السعال، والتحريك المبكر.",
+            "locale": "ar",
+            "template": "documented-authored-0b486628d7faf4891338"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "低风险（< 26）：1.6% 肺部并发症",
+            "locale": "zh",
+            "template": "documented-authored-139457fa72bc1ee5ebf7"
+          },
+          "note": {
+            "text": "常规护理。",
+            "locale": "zh",
+            "template": "documented-authored-c6f4dff4aeb45f30c387"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "中等风险（26 至 44）：13.3% 肺部并发症",
+            "locale": "zh",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "考虑肺保护策略和呼吸物理治疗。",
+            "locale": "zh",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "中等风险（26 至 44）：13.3% 肺部并发症",
+            "locale": "zh",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "考虑肺保护策略和呼吸物理治疗。",
+            "locale": "zh",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "高风险（≥ 45）：42.1% 肺部并发症",
+            "locale": "zh",
+            "template": "documented-authored-5fe26863855176d75328"
+          },
+          "note": {
+            "text": "术前优化、保护性通气、减少咳嗽的镇痛和早期活动。",
+            "locale": "zh",
+            "template": "documented-authored-0b486628d7faf4891338"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "低リスク（< 26）：肺合併症 1.6%",
+            "locale": "ja",
+            "template": "documented-authored-139457fa72bc1ee5ebf7"
+          },
+          "note": {
+            "text": "通常のケア。",
+            "locale": "ja",
+            "template": "documented-authored-c6f4dff4aeb45f30c387"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "中等度リスク（26～44）：肺合併症 13.3%",
+            "locale": "ja",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "肺保護戦略と呼吸理学療法を考慮する。",
+            "locale": "ja",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "中等度リスク（26～44）：肺合併症 13.3%",
+            "locale": "ja",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "肺保護戦略と呼吸理学療法を考慮する。",
+            "locale": "ja",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "高リスク（≥ 45）：肺合併症 42.1%",
+            "locale": "ja",
+            "template": "documented-authored-5fe26863855176d75328"
+          },
+          "note": {
+            "text": "手術前の最適化、保護的換気、咳嗽を抑える鎮痛、早期離床。",
+            "locale": "ja",
+            "template": "documented-authored-0b486628d7faf4891338"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "कम जोखिम (< 26): 1.6% फुफ्फुसीय जटिलताएँ",
+            "locale": "hi",
+            "template": "documented-authored-139457fa72bc1ee5ebf7"
+          },
+          "note": {
+            "text": "सामान्य देखभाल.",
+            "locale": "hi",
+            "template": "documented-authored-c6f4dff4aeb45f30c387"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "मध्यम जोखिम (26 से 44): 13.3% फुफ्फुसीय जटिलताएँ",
+            "locale": "hi",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "फेफड़ों की सुरक्षा की रणनीतियों और श्वसन फिजियोथेरेपी पर विचार करें.",
+            "locale": "hi",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "मध्यम जोखिम (26 से 44): 13.3% फुफ्फुसीय जटिलताएँ",
+            "locale": "hi",
+            "template": "documented-authored-161ab76c55d8a4e0d318"
+          },
+          "note": {
+            "text": "फेफड़ों की सुरक्षा की रणनीतियों और श्वसन फिजियोथेरेपी पर विचार करें.",
+            "locale": "hi",
+            "template": "documented-authored-78af5363a17bd5266f2d"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "उच्च जोखिम (≥ 45): 42.1% फुफ्फुसीय जटिलताएँ",
+            "locale": "hi",
+            "template": "documented-authored-5fe26863855176d75328"
+          },
+          "note": {
+            "text": "सर्जरी से पहले अनुकूलन, प्रोटेक्टिव वेंटिलेशन, खाँसी को बचाने वाली एनाल्जेसिया, और शीघ्र गतिशीलता.",
+            "locale": "hi",
+            "template": "documented-authored-0b486628d7faf4891338"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

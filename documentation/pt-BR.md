@@ -95,3 +95,35 @@ Resultado da fórmula ou classificação. Interpretação, conduta e aplicabilid
 Apache-2.0 aplica-se somente ao código da ELUCENIA. Os instrumentos, publicações, traduções e dados mantêm os direitos dos respectivos titulares. Preserve LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+As informações abaixo preservam as saídas do método para exemplos sintéticos. Não constituem validação clínica independente.
+
+### 1
+
+Baixo risco (< 26): 1,6% de complicações pulmonares
+
+Cuidados habituais.
+
+
+### 2
+
+Risco intermediário (26 a 44): 13,3% de complicações pulmonares
+
+Considerar estratégias de proteção pulmonar e fisioterapia respiratória.
+
+
+### 3
+
+Risco intermediário (26 a 44): 13,3% de complicações pulmonares
+
+Considerar estratégias de proteção pulmonar e fisioterapia respiratória.
+
+
+### 4
+
+Alto risco (≥ 45): 42,1% de complicações pulmonares
+
+Otimizar antes da cirurgia, ventilação protetora, analgesia que poupe a tosse e mobilização precoce.
+

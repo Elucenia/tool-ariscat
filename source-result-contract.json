@@ -1,0 +1,236 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "ariscat",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "07e5fe28dd0f92263e7f41d129006b4818ff110e",
+    "oldEngineSha256": "42ea541ad7130edd57de04fb709ea54dfdd5f7bf3a360561406031247fba8429",
+    "currentEngineSha256": "b7d49e682f76a392309beb139f7dffd15482014a7d7056d4f0a95f47aa23e2c0"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "55 anos, cirurgia periférica &lt; 2 h: 3 pontos",
+      "input": {
+        "idade": "3",
+        "sat": "0",
+        "incisao": "0",
+        "duracao": "0",
+        "infec": false,
+        "anemia": false,
+        "emerg": false
+      },
+      "publicOutput": {
+        "id": "ariscat",
+        "main": [
+          "3",
+          "pontos"
+        ],
+        "label": "ARISCAT",
+        "raw": {
+          "score": 3
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 3,
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "3",
+          "pontos"
+        ],
+        "label": "ARISCAT",
+        "level": "low",
+        "verdict": "Baixo risco (&lt; 26): 1,6% de complicações pulmonares",
+        "note": "Cuidados habituais.",
+        "raw": {
+          "score": 3
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "55 anos, SatO₂ 94%, abdominal alta &lt; 2 h: 3 + 8 + 15 = 26 (limite)",
+      "input": {
+        "idade": "3",
+        "sat": "8",
+        "incisao": "15",
+        "duracao": "0",
+        "infec": false,
+        "anemia": false,
+        "emerg": false
+      },
+      "publicOutput": {
+        "id": "ariscat",
+        "main": [
+          "26",
+          "pontos"
+        ],
+        "label": "ARISCAT",
+        "raw": {
+          "score": 26
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 26,
+        "level": "mid"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "26",
+          "pontos"
+        ],
+        "label": "ARISCAT",
+        "level": "mid",
+        "verdict": "Risco intermediário (26 a 44): 13,3% de complicações pulmonares",
+        "note": "Considerar estratégias de proteção pulmonar e fisioterapia respiratória.",
+        "raw": {
+          "score": 26
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "60 anos, abdominal alta de 2,5 h: 3 + 15 + 16 = 34",
+      "input": {
+        "idade": "3",
+        "sat": "0",
+        "incisao": "15",
+        "duracao": "16",
+        "infec": false,
+        "anemia": false,
+        "emerg": false
+      },
+      "publicOutput": {
+        "id": "ariscat",
+        "main": [
+          "34",
+          "pontos"
+        ],
+        "label": "ARISCAT",
+        "raw": {
+          "score": 34
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 34,
+        "level": "mid"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "34",
+          "pontos"
+        ],
+        "label": "ARISCAT",
+        "level": "mid",
+        "verdict": "Risco intermediário (26 a 44): 13,3% de complicações pulmonares",
+        "note": "Considerar estratégias de proteção pulmonar e fisioterapia respiratória.",
+        "raw": {
+          "score": 34
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 3,
+      "name": "82 anos, SatO₂ 93%, abdominal alta de 4 h: 16 + 8 + 15 + 23 = 62",
+      "input": {
+        "idade": "16",
+        "sat": "8",
+        "incisao": "15",
+        "duracao": "23",
+        "infec": false,
+        "anemia": false,
+        "emerg": false
+      },
+      "publicOutput": {
+        "id": "ariscat",
+        "main": [
+          "62",
+          "pontos"
+        ],
+        "label": "ARISCAT",
+        "raw": {
+          "score": 62
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 62,
+        "level": "high"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "62",
+          "pontos"
+        ],
+        "label": "ARISCAT",
+        "level": "high",
+        "verdict": "Alto risco (≥ 45): 42,1% de complicações pulmonares",
+        "note": "Otimizar antes da cirurgia, ventilação protetora, analgesia que poupe a tosse e mobilização precoce.",
+        "raw": {
+          "score": 62
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    }
+  ]
+}

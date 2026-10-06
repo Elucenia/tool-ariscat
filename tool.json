@@ -336,7 +336,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "ARISCAT/Canet 2010, Tabela 6: 7 fatores ponderados; duração ≤ 2 h = 0, > 2 h e ≤ 3 h = 16, > 3 h = 23",
-    "implementationVersion": "ariscat@native-2026-10-04+42ea541ad713",
+    "implementationVersion": "ariscat@native-2026-10-05+b7d49e682f76",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/21045639/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -629,7 +629,7 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "42ea541ad7130edd57de04fb709ea54dfdd5f7bf3a360561406031247fba8429",
+      "implementationHash": "b7d49e682f76a392309beb139f7dffd15482014a7d7056d4f0a95f47aa23e2c0",
       "diagnosticRubricSourceAmendment": {
         "at": "2026-10-04T18:59:19.497Z",
         "scope": "Source-documentation and selected label-only amendment; no engine or integer point code change. Private TOOL labels retain their prior source hash and are explicitly outside this candidate.",
@@ -796,7 +796,35 @@
           }
         ],
         "hash": "27f3d08e712c8bc6581066826e4f230eb14c53c42e18dbf7559b977be836b24a"
-      }
+      },
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "ariscat@native-2026-10-04+42ea541ad713",
+          "previousImplementationHash": "42ea541ad7130edd57de04fb709ea54dfdd5f7bf3a360561406031247fba8429",
+          "implementationHash": "b7d49e682f76a392309beb139f7dffd15482014a7d7056d4f0a95f47aa23e2c0",
+          "scientificBodySha256": "e85276683115c11c8a08c490b617391606f7137a1aaae50779ecc2e6796ea25d",
+          "metadataContractHash": "ff1ac7910546524bb0d5aa2d3281d172a9910e139dbd201c704c9ee1c34e7e75",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "O ARISCAT 2010 foi derivado e validado em uma coorte de 2464 pacientes cirúrgicos de 59 hospitais, com anestesia geral, neuraxial ou regional, e desfecho de complicações pulmonares pós-operatórias. A idade mínima, exclusões e pesos/faixas completos não estão disponíveis no resumo lido; as taxas da coorte não constituem uma estimativa individual recalibrada para outra população. Na nova leitura do artigo original de 2010, os Métodos descrevem adultos com pelo menos 18 anos e exclusões próprias da coorte; a Tabela 6 confirma duração ≤2 h, >2 a ≤3 h e >3 h. A fronteira de alto risco aparece como ≥45 na Tabela 7 e >45 no texto; essa divergência documental não foi adjudicada aqui.",
     "sourceLimitEvidence": {
@@ -832,20 +860,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/ariscat/calculator.js",
-    "bytes": 5274,
-    "sha256": "42ea541ad7130edd57de04fb709ea54dfdd5f7bf3a360561406031247fba8429"
+    "bytes": 5479,
+    "sha256": "b7d49e682f76a392309beb139f7dffd15482014a7d7056d4f0a95f47aa23e2c0"
   },
-  "sourceToolSha256": "be4f6660b0554f76c1141d6beff1aef6c1313b46da52370fed9a37c126defdc2",
+  "sourceToolSha256": "e232072e0deb9d370ba7abbde20522a522e3f63f183bbb7875c8b6b40afc7ad2",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "a9795aba818d242ec1c7b5dcf3e0747d1ee45ab65e24d241e37963f0b736fa83",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "a9795aba818d242ec1c7b5dcf3e0747d1ee45ab65e24d241e37963f0b736fa83",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",
